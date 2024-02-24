@@ -1,0 +1,31 @@
+---
+// Importaciones necesarias
+import { convertMarkdownToHtml } from "../../utils/textMarkdown.js";
+
+// Puedes definir los props aquí si esperas recibirlos desde otro componente o página
+const { title, paragraph, img, isService } = Astro.props;
+---
+
+<div class="my-10 lg:my-20">
+  <div class="md:flex gap-10 container_all items-center">
+    <div class="group md:w-[100%]">
+      {isService ? <h2 class="text-start text-gold pt-10 pb-2">Servicio</h2> : ""}
+      <h1 class={isService ? "md:text-start" : "md:text-start md:w-[75%] pt-5"}>{title}</h1>
+
+      <!-- Aquí se maneja el Markdown convertido a HTML -->
+      <p class="text-centers md:text-start mt-5 mb-10 md:w-[80%]" set:html={convertMarkdownToHtml(paragraph)} />
+    </div>
+
+    {
+      img ? (
+        <div class="flex justify-end md:w-[90%]">
+          <div class="rounded-t-[50%] h-[300px] md:h-[450px] md:w-[450px] border-2">
+            <img class="rounded-t-[50%] w-full h-[100%] object-cover p-2" src={img} alt="imagen" />
+          </div>
+        </div>
+      ) : (
+        ""
+      )
+    }
+  </div>
+</div>

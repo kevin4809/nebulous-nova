@@ -1,0 +1,19 @@
+---
+const { infoStamps } = Astro.props;
+---
+
+<div class="bg-grey_white keysService">
+  <div class="md:pb-10 container_all">
+    <h1 class="text-center py-10 md:w-[60%] m-auto md:pt-20">Las claves de nuestro servicio</h1>
+
+    <div class="md:flex justify-between items-center">
+      {
+        infoStamps?.map((item, i) => (
+          <div class="md:w-[20%]">
+            <img class="py-10 w-[90%] m-auto" src={item.url} alt={`imagen ${i}`} />
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</div>

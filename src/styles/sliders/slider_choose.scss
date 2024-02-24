@@ -1,0 +1,44 @@
+.slider_choose {
+  padding-bottom: 150px;
+  padding-top: 100px;
+  .swiper-slide {
+    width: 400px;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: white;
+    top: 88%;
+    z-index: 50;
+  }
+  .swiper-button-prev {
+    left: 40%;
+  }
+  .swiper-button-next {
+    right: 40%;
+  }
+
+  .swiper-pagination-fraction {
+    top: 0;
+    z-index: -1;
+  }
+
+  .swiper-pagination-current,
+  .swiper-pagination-total {
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+    font-family: "syne";
+  }
+
+  * {
+    color: black;
+  }
+  .swiper-pagination-current::after {
+    content: "de";
+    position: relative;
+    right: -9px;
+    font-size: 14px;
+    font-family: "syne";
+  }
+}

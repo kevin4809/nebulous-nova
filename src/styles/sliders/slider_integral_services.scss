@@ -1,0 +1,41 @@
+.slider_integral_services {
+  padding-top: 50px;
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #c89d62;
+  }
+
+  .swiper-pagination-fraction {
+    top: 5%;
+    z-index: -1;
+  }
+
+  .swiper-pagination-current,
+  .swiper-pagination-total {
+    font-weight: bold;
+    color: black;
+    font-size: 20px;
+    font-family: "syne_medium";
+  }
+
+  p {
+    color: black;
+    font-family: "syne_medium";
+  }
+
+  strong {
+    color: black;
+  }
+
+  * {
+    color: #ebe9e3;
+  }
+  .swiper-pagination-current::after {
+    content: "de";
+    position: relative;
+    right: -9px;
+    font-size: 14px;
+    font-family: "syne_medium";
+  }
+}

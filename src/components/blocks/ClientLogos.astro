@@ -1,0 +1,32 @@
+---
+const { isService, infoLogosClients } = Astro.props;
+---
+
+<div class="bg-black ourClients">
+  <div class="container_all pb-10 md:pb-20">
+    {
+      !isService ? (
+        <h1 class="text-center text-grey_white py-10 md:py-20">Nuestros clientes</h1>
+      ) : (
+        <div class="group">
+          <h1 class="text-center text-grey_white py-10 md:pt-20 md:w-[60%] md:m-auto">Algunos de nuestros clientes</h1>
+          <p class="text-white md:w-[60%] md:m-auto text-center mb-10 md:mb-20">
+            Sabemos que el <strong> tiempo </strong> es importante para los
+            <strong> asistentes de tu evento, </strong> por eso ofrecemos un
+            <strong> servicio ágil, eficiente y de calidad. </strong>
+          </p>
+        </div>
+      )
+    }
+
+    <div class="flex flex-wrap gap-x-5 md:gap-20">
+      {
+        infoLogosClients?.map((item, i) => (
+          <div class="w-[25%] m-auto flex justify-center items-center md:w-[10%]">
+            <img class="w-full min-h-[100px] object-contain hover:scale-110 transition-all duration-200" src={item.url} alt={`logo ${i}`} />
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</div>

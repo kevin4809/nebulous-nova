@@ -1,0 +1,22 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { getInfoHome } from "../apis/Api";
+
+const { data } = await getInfoHome();
+
+import HomeBanner from "./components/HomeBanner.astro";
+import SliderOurServices from "../components/sliders/SliderOurServices";
+import BlockTextOne from "../components/texts/BlockTextOne.astro";
+import KeyOurServices from "../components/blocks/KeysOurServices.astro";
+import ClientLogos from "../components/blocks/ClientLogos.astro";
+---
+
+<Layout title="Welcome to Astro.">
+  <main class="bg-grey">
+    <HomeBanner />
+    <SliderOurServices client:load infoService={data?.servicios} />
+    <BlockTextOne title="¿Quiénes Somos?" paragraph={data?.texto_quienes_somos} img={data?.imagen_quienes_somos.url} />
+    <KeyOurServices infoStamps={data?.sellos_nuestro_servicio} />
+    <ClientLogos infoLogosClients={data?.logos_nuestros_clientes} />
+  </main>
+</Layout>

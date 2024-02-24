@@ -1,0 +1,45 @@
+.button_one {
+  text-align: center;
+
+  button {
+    padding: 10px 30px;
+    border: 2px black solid;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: "syne_bold";
+    cursor: pointer;
+  }
+
+  @media (hover: hover) {
+    button:hover {
+      background-color: #2e2d2c;
+      color: white;
+      scale: 1.1;
+      transition: scale 0.5s ease;
+    }
+  }
+}
+
+.button_two {
+  text-align: center;
+
+  button {
+    padding: 12px 20px;
+    border: 2px black solid;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    font-family: "syne_bold";
+    cursor: pointer;
+    transition: scale 0.5s ease;
+  }
+
+  @media (hover: hover) {
+    button:hover {
+      background-color: #c89d62;
+      border-color: #c89d62;
+      scale: 1.1;
+      transition: scale 0.5s ease;
+    }
+  }
+}

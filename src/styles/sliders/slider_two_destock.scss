@@ -1,0 +1,21 @@
+.swiper_two_destock {
+  padding-bottom: 100px;
+  
+  .swiper-slide {
+    width: 400px;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: black;
+    top: 85%;
+
+    z-index: 50;
+  }
+  .swiper-button-prev {
+    left: 40%;
+  }
+  .swiper-button-next {
+    right: 40%;
+  }
+}

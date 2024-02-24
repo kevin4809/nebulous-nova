@@ -1,0 +1,43 @@
+---
+import DropDown from "../dynamic/components/DropDown";
+
+const fields = [
+  { name: "Home" },
+  { name: "¿Por qué elegirnos?" },
+  {
+    name: "Servicios",
+    type: "dropdown",
+    dropdownItems: [
+      "Administración de alimentos y bebidas enescenarios",
+      "Soluciones de alimentación masiva eneventos y festivales",
+      "Operación de barras y bebidas",
+      "Desarrollo de zonas de experiencias VIP",
+      "Catering para artistas y alimentación deproducción",
+    ],
+  },
+  { name: "Nuestros Clientes" },
+  { name: "Contacto" },
+];
+---
+
+<header class="bg-white fixed w-full z-50 shadow">
+  <div class="container_all flex justify-between items-center pt-5 pb-5">
+    <a href="/" class="w-[50px] md:w-[150px] cursor-pointer">
+      <img class="w-[100px]" src="/assets/logotipo.png" alt="logo venues snacks" />
+    </a>
+
+    <div class="flex gap-[25px]">
+      {
+        fields.map((field) => (
+          <div>
+            {field.type === "dropdown" ? (
+              <DropDown client:load parent_name="Servicios" children_name={field.dropdownItems} />
+            ) : (
+              <p class="cursor-pointer hover:scale-110 transition-transform duration-500">{field.name}</p>
+            )}
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</header>

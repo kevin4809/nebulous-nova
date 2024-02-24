@@ -1,0 +1,57 @@
+@import "./slider_two_destock.scss";
+@import "./slider_three_mobil.scss";
+@import "./slider_choose.scss";
+@import "./slider_integral_services.scss";
+
+.swiper_experiences {
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: transparent;
+    padding: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 10px;
+  }
+  .swiper-slide {
+    width: 300px;
+    @media (min-width: 768px) {
+      width: 300px;
+    }
+  }
+}
+
+.slider_our_services {
+  .swiper-slide {
+    width: 300px;
+  }
+
+  .img {
+    width: 200px;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: transparent;
+    padding: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 10px;
+  }
+}
+
+.slider_logos_common {
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: transparent;
+    padding: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 10px;
+  }
+  .swiper-slide {
+    width: 150px;
+
+    @media (min-width: 768px) {
+      width: 250px;
+    }
+  }
+}

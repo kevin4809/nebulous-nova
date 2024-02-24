@@ -1,0 +1,134 @@
+@import "./sliders/slider_choose.scss";
+@import "./sliders/slider_integral_services.scss";
+@import "./sliders/slider_three_mobil.scss";
+@import "./sliders/slider_two_destock.scss";
+@import "./sliders/sliders.scss";
+
+@import "./gallery/gallery.scss";
+@import "./buttons.scss";
+@import "./drop_down.scss";
+@import "./loader.scss";
+
+h1 {
+  font-size: 2.25rem; /* Equivalente a text-4xl */
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 3rem; /* Equivalente a md:text-5xl */
+  }
+}
+
+h2 {
+  font-size: 1.25rem; /* Equivalente a text-xl */
+}
+
+@media (min-width: 768px) {
+  h2 {
+    font-size: 1.875rem; /* Equivalente a md:text-3xl */
+  }
+}
+
+h3 {
+  font-size: 1.5rem; /* Equivalente a text-2xl para ambas, móvil y escritorio */
+}
+
+p {
+  font-size: 17px; /* Especificado directamente */
+}
+
+@media (min-width: 768px) {
+  p {
+    font-size: 20px; /* Especificado directamente para md */
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.animated-element {
+  opacity: 0;
+}
+
+.padding_top {
+  padding-top: 50px;
+  @media (min-width: 768px) {
+    padding-top: 100px;
+  }
+}
+
+.color_white {
+  p {
+    color: white;
+  }
+}
+
+.container_all {
+  width: 85%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.menu_disable {
+  display: none;
+}
+
+.noScroll {
+  overflow: hidden;
+}
+h1,
+h2,
+h3 {
+  font-family: "syne_bold";
+  color: #2e2d2c;
+}
+
+p {
+  font-family: "syne_medium";
+  color: #2e2d2c;
+  line-height: 1.2;
+}
+.shadow {
+  box-shadow: 0px 3px 6px #00000029;
+}
+
+.syne_bold {
+  font-family: syne_bold;
+}
+
+strong {
+  font-family: "syne_bold";
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+.regular {
+  font-family: "syne_regular";
+}
+
+.regular2 {
+  font-family: syne_bold;
+}
+@font-face {
+  font-family: "syne_medium";
+  src: url("/assets/fonts/Syne-Medium/Syne-Medium.ttf") format("truetype"), url("/assets/fonts/Syne-Medium/Syne-Medium.otf") format("otf"),
+    url("/assets/fonts/Syne-Medium/Syne-Medium.woff") format("woff"), url("/assets/fonts/Syne-Medium/Syne-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "syne_bold";
+  src: url("/assets/fonts/Syne-Bold/Syne-Bold.ttf") format("truetype"), url("/assets/fonts/Syne-Bold/Syne-Bold.otf") format("otf"),
+    url("/assets/fonts/Syne-Bold/Syne-Bold.woff") format("woff"), url("/assets/fonts/Syne-Bold/Syne-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "syne_regular";
+  src: url("/assets/fonts/Syne-Regular/Syne-Regular.ttf") format("truetype"), url("/assets/fonts/Syne-Regular/Syne-Regular.otf") format("otf"),
+    url("/assets/fonts/Syne-Regular/Syne-Regular.woff") format("woff"), url("/assets/fonts/Syne-Regular/Syne-Regular.woff2") format("woff2");
+}
