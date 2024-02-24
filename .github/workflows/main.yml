@@ -1,20 +1,31 @@
 name: Deploy to cPanel
+
 on:
   push:
     branches:
-      - main
+      - main # Asegúrate de cambiar esto si tu rama principal tiene un nombre diferente
+
 jobs:
-  FTP-Deploy-Action:
-    name: FTP-Deploy-Action
+  build-and-deploy:
+    name: Build and Deploy
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2.1.0
-        with:
-          fetch-depth: 2
-      # Deploy to cPanel
+      # Check out the repository
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Install dependencies and build the Astro project
+      - name: Install dependencies and build
+        run: |
+          npm install
+          npm run build
+
+      # Deploy to cPanel using FTP
       - name: FTP-Deploy-Action
-        uses: SamKirkland/FTP-Deploy-Action@3.1.1
+        uses: SamKirkland/FTP-Deploy-Action@4.2.0 # Asegúrate de usar la última versión disponible
         with:
           ftp-server: ${{ secrets.FTP_SERVER }}
           ftp-username: ${{ secrets.FTP_USERNAME }}
           ftp-password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./dist/ # Asegúrate de que este sea el directorio de salida correcto para tu proyecto de Astro
+          git-ftp-args: --insecure # Elimina --insecure si no es necesario para tu servidor
