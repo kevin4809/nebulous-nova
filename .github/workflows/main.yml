@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
   repository_dispatch:
-    types: [strapi-update] # Define un tipo personalizado para el evento de dispatch
+    types: [strapi-update] 
   workflow_dispatch:
 
 permissions:
@@ -23,4 +23,4 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          # Aquí van las configuraciones adicionales según tus necesidades
+
