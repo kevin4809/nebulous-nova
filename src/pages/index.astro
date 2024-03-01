@@ -13,7 +13,7 @@ import ClientLogos from "../components/blocks/ClientLogos.astro";
 
 <Layout title="Welcome to Astro.">
   <main class="bg-grey">
-    <!-- <HomeBanner /> -->
+    <HomeBanner />
     <SliderOurServices client:load infoService={data?.servicios} />
     <BlockTextOne title="¿Quiénes Somos?" paragraph={data?.texto_quienes_somos} img={data?.imagen_quienes_somos.url} />
     <KeyOurServices infoStamps={data?.sellos_nuestro_servicio} />
